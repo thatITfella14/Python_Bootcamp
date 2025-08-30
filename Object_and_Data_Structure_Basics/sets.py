@@ -32,7 +32,7 @@ myset.add("three") # Trying to add a duplicate element
 print(myset)  # Output: {1, 2.5, 'three'} - No change, as 'three' is already in the set
 
 
-# Since you ccan only have unique elements in a set - however, you can cast a list with duplicate values to set to find the unique values
+# Since you can only have unique elements in a set - however, you can cast a list with duplicate values to set to find the unique values
 
 mylist = [1,1,1,1,1,2,3,4,4,4,4,5,6,7,8,8,9,9]
 

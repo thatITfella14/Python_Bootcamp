@@ -5,7 +5,7 @@
 
 # Example 1: Basic usage of .format()
 
-print("This is a string {}".format('INSERTED'))  # Output: This is a tring INSERTED
+print("This is a string {}".format('INSERTED'))  # Output: This is a string INSERTED
 
 print("Hello, {}. Welcome to the {}".format('Alice', 'Wonderland'))  # Output: Hello, Alice. Welcome to the Wonderland
 

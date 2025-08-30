@@ -7,4 +7,4 @@ print(1 < 2)  # This will print: True
 
 print(1 == 1)  # This will print: True
 
-print(1 ==2)  # This will print: False
+print(1 == 2)  # This will print: False
