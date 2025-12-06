@@ -24,8 +24,7 @@ print(check_even_list(my_list))
 
 print()
 
-# In the above given example what if we wanted to return "False"? A begginer would make a mistake "else:
-#                                                                                                       return False"
+# In the above given example what if we wanted to return "False"? A begginer would make a mistake "else: return False"
 # Why is this wrong??? Because think of return as a breakout statement. If you put return False that means anytime there's an Odd number it'll breakout without checking the rest of the numbers in that list. So if a first number in the list is an Odd number the function will return False without checking rest of the numbers in the list. For example in list_a = [1,3,4,6] will return False because the first number is an Odd number, however, it should return True because there's an even number in the given list. This is why we use "pass" and not return False.
 
 # Below given is how you return a False:
