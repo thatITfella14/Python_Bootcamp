@@ -2,6 +2,7 @@
 
 # LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd
 
+from _ctypes import pointer
 def lesser_of_two_evens(a,b):
     if a % 2 == 0 and b % 2 == 0:
         return min(a,b)
@@ -63,3 +64,66 @@ def almost_there(n):
         return True
     else:
         return False
+
+# LEVEL 2 PROBLEMS
+
+# FIND 33: Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
+def has_33(nums):
+    for x,y in zip(nums,nums[1:]):
+        if x == 3 and y == 3:
+            return True
+    return False
+
+print()
+print()
+
+# PAPER DOLL: Given a string, return a string where for every character in the original there are three characters
+
+def paper_doll(text):
+    result = ""
+    for letter in text:
+        result += letter * 3
+    return result
+
+print()
+print()
+
+# BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, return their sum. If their sum exceeds 21 and there's an eleven, reduce the total sum by 10. Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
+
+def blackjack(a,b,c):
+    total = a + b +c
+    if total <= 21:
+        return total
+    if 11 in (a,b,c):
+        total = total - 10
+    return "BUST" if total > 21 else total
+
+    print()
+    print()
+
+# SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
+
+def summer_69(arr):
+    total = 0
+    for num in arr:
+        if not (6 <= num <= 9):
+            total += num
+    return total
+
+print()
+print()
+
+# CHALLENGING PROBLEMS
+
+# SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+
+def spy_game(arr):
+    seq = [0,0,7]
+    pointer = 0
+    for num in arr:
+        if num == seq[pointer]:
+            pointer += 1
+            if pointer == len(seq):
+                return True
+    return False
